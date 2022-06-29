@@ -2,10 +2,14 @@
 # My fourth script - sysinfo.sh
 # This coding will shows different strings
 
+#Let's use echo command to show space in command line output
+echo '                               '
 #First we will creat Heading
 echo "Report for My Virtual Machine"
 
-#We will use some extantion to get precise information 
+#Now we will use echo command to get some space in output
+echo '====================='
+#We will use some extantion to get precise information
 dn=$(hostname --fqdn)
 echo "FQDN: $dn"
 
@@ -20,3 +24,6 @@ echo "Virtual machine IP ADDRESS: $ip"
 #Information of filesystem can be gotten from df command
 rt=$(df -h | awk 'NR=="2" {print $4}')
 echo "Free space in root Filesystem: $rt"
+
+#Again we will use echo command to get space in our output
+echo '====================='
